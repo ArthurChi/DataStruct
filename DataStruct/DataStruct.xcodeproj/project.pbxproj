@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				2A1E0BE71DB90405005E317F /* main.c */,
-				2A1E0BEE1DB90422005E317F /* SeqList.c */,
 				2A1E0BEF1DB90422005E317F /* SeqList.h */,
+				2A1E0BEE1DB90422005E317F /* SeqList.c */,
 			);
 			path = DataStruct;
 			sourceTree = "<group>";
