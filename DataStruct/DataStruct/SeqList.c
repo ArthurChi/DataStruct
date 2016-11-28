@@ -12,9 +12,9 @@
 
 typedef struct _tag_SeqList {
     
+    unsigned long *node;
     int length;
     int capacity;
-    unsigned int *node;
     
 } TSeqList;
 
@@ -36,7 +36,7 @@ SeqList* SeqList_create(int capature) {
     
     memset(list, 0, sizeof(TSeqList));
     
-    list->node = malloc(sizeof(unsigned int) * capature);
+    list->node = malloc(sizeof(SeqListNode*) * capature);
     
     if (list->node == NULL) {
         printf("内存分配失败");
@@ -96,7 +96,7 @@ void SeqList_insert(SeqList* list, SeqListNode* node, int position) {
         tList->node[i] = tList->node[i-1];
     }
     
-    tList->node[position] = (unsigned int)node;
+    tList->node[position] = (unsigned long)node;
     tList->length ++;
 }
 
@@ -110,7 +110,7 @@ SeqListNode* SeqList_node(SeqList* list, int position) {
         return NULL;
     }
     
-    ret = tList->node + (position * sizeof(unsigned int));
+    ret = tList->node[position];
     
     return ret;
 }
