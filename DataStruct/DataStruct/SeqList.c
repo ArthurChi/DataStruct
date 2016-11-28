@@ -110,7 +110,7 @@ SeqListNode* SeqList_node(SeqList* list, int position) {
         return NULL;
     }
     
-    ret = tList->node[position];
+    ret = (SeqListNode*)tList->node[position];
     
     return ret;
 }
