@@ -29,7 +29,7 @@ int main(int argc, const char * argv[]) {
 
 void SeqListAPI() {
 
-//    Person *p1, *p2, *p3;
+    Person p1, p2, p3;
     
     SeqList* list = NULL;
     
@@ -38,15 +38,22 @@ void SeqListAPI() {
     Person *pp = (malloc(sizeof(Person)));
     pp->age = 29;
     pp->name = "pp";
+    
+    p1.name = "p1";
+    p1.age = 25;
+    p2.name = "p2";
+    p2.age = 37;
+    p3.name = "p3";
+    p3.age = 40;
 
     SeqList_insert(list, pp, 0);
     
 //    printf("%p\n", pp);
 //    printf("%d\n", pp->age);
 //    printf("%s\n", pp->name);
-//    SeqList_insert(list, &p1, 0);
-//    SeqList_insert(list, &p2, 1);
-//    SeqList_insert(list, &p3, 2);
+    SeqList_insert(list, &p1, 0);
+    SeqList_insert(list, &p2, 1);
+    SeqList_insert(list, &p3, 2);
     
     for (int i = 0; i < SeqList_getlenght(list); i++) {
         
