@@ -59,6 +59,22 @@ void SeqListAPI() {
         
         Person* p = SeqList_node(list, i);
         
+        printf("%d\n", i);
+        printf("%d\n", p->age);
+        printf("%s\n", p->name);
+        //        printf("%d", p1.age);
+        //        printf("%s", p->name);
+    }
+    
+    printf("before del\n");
+    
+    SeqList_delete(list, 0);
+    
+    for (int i = 0; i < SeqList_getlenght(list); i++) {
+        
+        Person* p = SeqList_node(list, i);
+        
+        printf("%d\n", i);
         printf("%d\n", p->age);
         printf("%s\n", p->name);
         //        printf("%d", p1.age);

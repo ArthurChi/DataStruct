@@ -43,7 +43,7 @@ SeqList* SeqList_create(int capature) {
         return NULL;
     }
     
-    memset(list->node, 0, sizeof(unsigned int) * capature);
+    memset(list->node, 0, sizeof(unsigned long) * capature);
     
     list->length = 0;
     list->capacity = capature;
@@ -118,6 +118,17 @@ SeqListNode* SeqList_node(SeqList* list, int position) {
 // Delete node at postion
 void SeqList_delete(SeqList* list, int position) {
     
+    TSeqList* tList = list;
+    
+    if (tList == NULL || position >= tList->length || position < 0) {
+        return;
+    }
+    
+    for (int i=position; i < tList->length; i++) {
+        tList->node[i] = tList->node[i+1];
+    }
+    
+    tList->length --;
 }
 
 int SeqList_getlenght(SeqList* list) {
