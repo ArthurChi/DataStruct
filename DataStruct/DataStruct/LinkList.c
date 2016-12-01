@@ -10,7 +10,7 @@
 #include <string.h>
 #include "LinkList.h"
 
-typedef unsigned int Data;
+typedef unsigned long Data;
 
 typedef struct _link_node {
     
