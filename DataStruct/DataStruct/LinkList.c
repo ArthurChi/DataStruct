@@ -7,6 +7,7 @@
 //
 
 #include <stdlib.h>
+#include <string.h>
 #include "LinkList.h"
 
 typedef unsigned int Data;
@@ -29,6 +30,8 @@ LinkList* LinkList_create() {
     if (head == NULL) {
         return NULL;
     }
+    
+    memset(head, 0, sizeof(Node));
     
     return head;
 }
@@ -77,6 +80,12 @@ void LinkList_insert(LinkList* list, LinkListNode* node, int position) {
     }
     
     Node* insertNode = (malloc(sizeof(Node)));
+    
+    if (insertNode == NULL) {
+        return;
+    }
+    
+    memset(insertNode, 0, sizeof(Node));
     insertNode->data = node;
     insertNode->next = p->next;
     p->next = insertNode;
