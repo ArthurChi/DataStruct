@@ -54,12 +54,21 @@ SeqList* SeqList_create(int capature) {
 // Destory
 void SeqList_destory(SeqList* list) {
     
-    if (list == NULL) {
+    TSeqList *tList = list;
+    
+    if (tList == NULL) {
         return;
     }
     
+    if (tList->node == NULL) {
+        free(list);
+        return;
+    }
+    
+    free(tList->node);
     free(list);
 }
+
 // Clear
 void SeqList_clear(SeqList* list) {
     
@@ -120,7 +129,7 @@ void SeqList_delete(SeqList* list, int position) {
     
     TSeqList* tList = list;
     
-    if (tList == NULL || position >= tList->length || position < 0) {
+    if (tList == NULL || position > tList->length || position < 0) {
         return;
     }
     
