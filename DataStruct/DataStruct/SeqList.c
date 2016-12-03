@@ -27,14 +27,14 @@ SeqList* SeqList_create(int capature) {
         return NULL;
     }
     
-    list = (TSeqList*)malloc(sizeof(TSeqList) * capature);
+    list = (TSeqList*)malloc(sizeof(TSeqList));
     
     if (list == NULL) {
         printf("内存分配失败");
         return NULL;
     }
     
-    memset(list, 0, sizeof(TSeqList));
+    memset(list, 0, sizeof(TSeqList) * capature);
     
     list->node = malloc(sizeof(SeqListNode*) * capature);
     
@@ -43,6 +43,7 @@ SeqList* SeqList_create(int capature) {
         return NULL;
     }
     
+    // 有问题
     memset(list->node, 0, sizeof(unsigned long) * capature);
     
     list->length = 0;
