@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2A1E0BE81DB90405005E317F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E0BE71DB90405005E317F /* main.cpp */; };
 		2A4E434B1DEC67F0005079D1 /* SeqList.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E43491DEC67F0005079D1 /* SeqList.c */; };
-		2A8130E01E06C6ED00633542 /* SeqStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A8130DE1E06C6ED00633542 /* SeqStack.cpp */; };
 		2A99D94A1DEBBAE900DC101B /* LinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D9481DEBBAE900DC101B /* LinkList.c */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +29,10 @@
 		2A1E0BE71DB90405005E317F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2A4E43491DEC67F0005079D1 /* SeqList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SeqList.c; sourceTree = "<group>"; };
 		2A4E434A1DEC67F0005079D1 /* SeqList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeqList.h; sourceTree = "<group>"; };
-		2A8130DE1E06C6ED00633542 /* SeqStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SeqStack.cpp; sourceTree = "<group>"; };
 		2A8130DF1E06C6ED00633542 /* SeqStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SeqStack.hpp; sourceTree = "<group>"; };
 		2A99D9481DEBBAE900DC101B /* LinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
 		2A99D9491DEBBAE900DC101B /* LinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
+		2AA61A111E090563008A0A99 /* LinkStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkStack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +71,7 @@
 				2A99D9491DEBBAE900DC101B /* LinkList.h */,
 				2A99D9481DEBBAE900DC101B /* LinkList.c */,
 				2A8130DF1E06C6ED00633542 /* SeqStack.hpp */,
-				2A8130DE1E06C6ED00633542 /* SeqStack.cpp */,
+				2AA61A111E090563008A0A99 /* LinkStack.hpp */,
 			);
 			path = DataStruct;
 			sourceTree = "<group>";
@@ -133,7 +132,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8130E01E06C6ED00633542 /* SeqStack.cpp in Sources */,
 				2A1E0BE81DB90405005E317F /* main.cpp in Sources */,
 				2A99D94A1DEBBAE900DC101B /* LinkList.c in Sources */,
 				2A4E434B1DEC67F0005079D1 /* SeqList.c in Sources */,

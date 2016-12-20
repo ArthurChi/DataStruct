@@ -7,10 +7,14 @@
 //
 
 #include <stdio.h>
+#include <iostream>
 //#include <stdlib.h>
 //#include "LinkList.h"
 //#include "SeqList.h"
 #include "SeqStack.hpp"
+#include "LinkStack.hpp"
+
+using namespace std;
 
 //typedef struct Person {
 //    char* name;
@@ -19,14 +23,17 @@
 //
 //void SeqListAPI();
 //void LinkListAPI();
+
 void SeqStackAPI();
+void LinkStackAPI();
 
 int main(int argc, const char * argv[]) {
     
 //    SeqListAPI();
 //    LinkListAPI();
     
-    SeqStackAPI();
+//    SeqStackAPI();
+    LinkStackAPI();
     
     return 0;
 }
@@ -128,15 +135,35 @@ int main(int argc, const char * argv[]) {
 //
 //}
 
+void each(int* node) {
+    cout<<*(int*)(node)<<endl;
+}
+
 void SeqStackAPI() {
     
     int a = 10;
     
-    SeqStack *s = new SeqStack(10);
-    s->push(&a);
-    printf("length is %d\n", s->length());
-    int *tmpa = (int*)s->pop();
-    printf("node is %d\n", *tmpa);
-    printf("length is %d\n", s->length());
-    printf("\n");
+    SeqStack<int> *s = new SeqStack<int>(10);
+    s->push(a);
+//    s->traverse(each);
+    cout<< "length is " << s->length() << endl;
+    int tmpa = s->pop();
+    cout<< "node is " << tmpa << endl;
+    cout<< "length is " << s->length() << endl;
+    delete s;
+}
+
+void LinkStackAPI() {
+    
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    
+    LinkStack<int> *s = new LinkStack<int>();
+    s->push(a);
+    s->push(b);
+    s->push(c);
+    s->traverse();
+    cout << s->pop() << endl;
+    delete s;
 }
