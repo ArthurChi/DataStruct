@@ -27,6 +27,7 @@
 /* Begin PBXFileReference section */
 		2A1E0BE41DB90405005E317F /* DataStruct */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStruct; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1E0BE71DB90405005E317F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2A44C0B31E0E3CD500303951 /* SeqQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SeqQueue.hpp; sourceTree = "<group>"; };
 		2A4E43491DEC67F0005079D1 /* SeqList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SeqList.c; sourceTree = "<group>"; };
 		2A4E434A1DEC67F0005079D1 /* SeqList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeqList.h; sourceTree = "<group>"; };
 		2A8130DF1E06C6ED00633542 /* SeqStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SeqStack.hpp; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 				2A99D9481DEBBAE900DC101B /* LinkList.c */,
 				2A8130DF1E06C6ED00633542 /* SeqStack.hpp */,
 				2AA61A111E090563008A0A99 /* LinkStack.hpp */,
+				2A44C0B31E0E3CD500303951 /* SeqQueue.hpp */,
 			);
 			path = DataStruct;
 			sourceTree = "<group>";

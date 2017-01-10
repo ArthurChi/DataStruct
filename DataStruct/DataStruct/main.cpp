@@ -13,6 +13,7 @@
 //#include "SeqList.h"
 #include "SeqStack.hpp"
 #include "LinkStack.hpp"
+#include "SeqQueue.hpp"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ using namespace std;
 
 void SeqStackAPI();
 void LinkStackAPI();
+void SeqQueueAPI();
 
 int main(int argc, const char * argv[]) {
     
@@ -33,7 +35,9 @@ int main(int argc, const char * argv[]) {
 //    LinkListAPI();
     
 //    SeqStackAPI();
-    LinkStackAPI();
+//    LinkStackAPI();
+    
+    SeqQueueAPI();
     
     return 0;
 }
@@ -166,4 +170,30 @@ void LinkStackAPI() {
     s->traverse();
     cout << s->pop() << endl;
     delete s;
+}
+
+void SeqQueueAPI() {
+    
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    
+    SeqQueue<int> *q = new SeqQueue<int>(5);
+    q->enQueue(a);
+    q->enQueue(b);
+    q->enQueue(c);
+    
+    cout<< q->deQueue() << endl;
+    cout << q->deQueue() << endl;
+    
+    q->clearQueue();
+    q->enQueue(40);
+    
+    cout << q->deQueue() << endl;
+    
+    q->enQueue(50);
+    q->enQueue(60);
+    
+    cout << q->deQueue() << endl;
+    cout << q->deQueue() << endl;
 }
