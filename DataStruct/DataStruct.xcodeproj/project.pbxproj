@@ -33,6 +33,7 @@
 		2A8130DF1E06C6ED00633542 /* SeqStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SeqStack.hpp; sourceTree = "<group>"; };
 		2A99D9481DEBBAE900DC101B /* LinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinkList.c; sourceTree = "<group>"; };
 		2A99D9491DEBBAE900DC101B /* LinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
+		2AA17D891E2512960045E0A7 /* SeqTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SeqTree.hpp; sourceTree = "<group>"; };
 		2AA61A111E090563008A0A99 /* LinkStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkStack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +75,7 @@
 				2A8130DF1E06C6ED00633542 /* SeqStack.hpp */,
 				2AA61A111E090563008A0A99 /* LinkStack.hpp */,
 				2A44C0B31E0E3CD500303951 /* SeqQueue.hpp */,
+				2AA17D891E2512960045E0A7 /* SeqTree.hpp */,
 			);
 			path = DataStruct;
 			sourceTree = "<group>";

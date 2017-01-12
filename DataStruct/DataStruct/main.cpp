@@ -14,6 +14,7 @@
 #include "SeqStack.hpp"
 #include "LinkStack.hpp"
 #include "SeqQueue.hpp"
+#include "SeqTree.hpp"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ using namespace std;
 void SeqStackAPI();
 void LinkStackAPI();
 void SeqQueueAPI();
+void SeqTreeAPI();
 
 int main(int argc, const char * argv[]) {
     
@@ -37,7 +39,8 @@ int main(int argc, const char * argv[]) {
 //    SeqStackAPI();
 //    LinkStackAPI();
     
-    SeqQueueAPI();
+//    SeqQueueAPI();
+    SeqTreeAPI();
     
     return 0;
 }
@@ -196,4 +199,36 @@ void SeqQueueAPI() {
     
     cout << q->deQueue() << endl;
     cout << q->deQueue() << endl;
+}
+
+void SeqTreeAPI() {
+    
+    int rootNode = 10;
+    SeqTree<int*> *pTree = new SeqTree<int*>(10, &rootNode);
+    
+    int rootLeft = 9;
+    pTree->addNode(0, &rootLeft, true);
+    
+    int rootLeftLeft = 8;
+    
+    pTree->addNode(1, &rootLeftLeft, true);
+    
+    int rootLeftLeftLeft = 7;
+    pTree->addNode(3, &rootLeftLeftLeft, true);
+    
+    int rootLeftLeftLeftLeft = 6;
+    pTree->addNode(7, &rootLeftLeftLeftLeft, true);
+    
+    int rootRight = 5;
+    pTree->addNode(0, &rootRight, false);
+    
+    int rootRightRight = 4;
+    pTree->addNode(2, &rootRightRight, false);
+    
+    pTree->TreeTraverse();
+    
+    pTree->deleteNode(3);
+    cout << endl;
+    
+    pTree->TreeTraverse();
 }
