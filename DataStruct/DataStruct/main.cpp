@@ -15,6 +15,9 @@
 #include "LinkStack.hpp"
 #include "SeqQueue.hpp"
 #include "SeqTree.hpp"
+#include "LinkTree.hpp"
+
+#include "Sort.hpp"
 
 using namespace std;
 
@@ -30,6 +33,7 @@ void SeqStackAPI();
 void LinkStackAPI();
 void SeqQueueAPI();
 void SeqTreeAPI();
+void LinkTreeAPI();
 
 int main(int argc, const char * argv[]) {
     
@@ -38,9 +42,18 @@ int main(int argc, const char * argv[]) {
     
 //    SeqStackAPI();
 //    LinkStackAPI();
-    
+//    
 //    SeqQueueAPI();
-    SeqTreeAPI();
+
+    //    SeqTreeAPI();
+//    LinkTreeAPI();
+    
+    int arr[] = {43, 45, 76, 54, 234, 7, 54, 65};
+    int length = sizeof(arr) / sizeof(arr[0]);
+    
+//    Sort::BubbleSort(arr, length);
+    Sort::InsertSort(arr, length);
+    
     
     return 0;
 }
@@ -231,4 +244,35 @@ void SeqTreeAPI() {
     cout << endl;
     
     pTree->TreeTraverse();
+}
+
+void LinkTreeAPI() {
+    
+    int rootNode = 10;
+    LinkTree *pTree = new LinkTree(&rootNode);
+    
+    int rootLeft = 9;
+    pTree->addNode(0, &rootLeft, true);
+    
+    int rootLeftLeft = 8;
+    pTree->addNode(1, &rootLeftLeft, true);
+    
+    int rootLeftLeftLeft = 7;
+    pTree->addNode(3, &rootLeftLeftLeft, true);
+    
+    int rootLeftLeftLeftLeft = 6;
+    pTree->addNode(7, &rootLeftLeftLeftLeft, true);
+    
+    int rootRight = 5;
+    pTree->addNode(0, &rootRight, false);
+    
+    int rootRightRight = 4;
+    pTree->addNode(2, &rootRightRight, false);
+    
+    pTree->preTraverse();
+    
+    pTree->delNode(3);
+    cout << endl;
+    
+    pTree->preTraverse();
 }
